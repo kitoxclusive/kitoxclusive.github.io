@@ -12,9 +12,9 @@ const CONFIG = {
   name:     "Kitolicious",
   tagline:  "Digital Creator · Model · Influencer",
   bio:      "Hier steht ein kurzer Text über dich: wer du bist, was du machst und warum deine Fans dich lieben.",
-  heroImage:"https://picsum.photos/seed/hero/1200/1600",      // dein Titelfoto
+  heroImage:"img/sex-is-art.jpg",      // dein Titelfoto
   aboutImage:"https://picsum.photos/seed/about/800/1000",     // Foto für "Über mich"
-  accent:   "#ff2d95",                                        // Akzentfarbe
+  accent:   "#b57edc",                                        // Akzentfarbe
   email:    "kontakt@deine-domain.de",
   mainCta:  { label: "Exklusive Inhalte", url: "#exklusiv" }, // optional, leer lassen = ausblenden
   socials: [ // icon-Namen: https://tabler.io/icons
@@ -33,16 +33,16 @@ const CONFIG = {
     { icon:"brand-x",         label:"xtralicious", url:"https://x.com/kitoXtra" }
   ],
   products: [ // Shop-Artikel; badge: "Neu", "Ausverkauft" oder ""
-    { title:"PRODUKT 1", price:"19,99 €", image:"https://picsum.photos/seed/p1/600/800", url:"#", badge:"Neu" },
-    { title:"PRODUKT 2", price:"29,99 €", image:"https://picsum.photos/seed/p2/600/800", url:"#", badge:"Neu" },
-    { title:"PRODUKT 3", price:"9,99 €",  image:"https://picsum.photos/seed/p3/600/800", url:"#", badge:"" },
-    { title:"PRODUKT 4", price:"49,99 €", image:"https://picsum.photos/seed/p4/600/800", url:"#", badge:"Ausverkauft" }
+    { title:"PRODUKT 1", price:"19,99 €", image:"img/sex-is-art.jpg", url:"#", badge:"Neu" },
+    { title:"PRODUKT 2", price:"29,99 €", image:"img/sex-is-art.jpg", url:"#", badge:"Neu" },
+    { title:"PRODUKT 3", price:"9,99 €",  image:"img/sex-is-art.jpg", url:"#", badge:"" },
+    { title:"PRODUKT 4", price:"49,99 €", image:"img/sex-is-art.jpg", url:"#", badge:"Ausverkauft" }
   ]
 };
 /* ===================================================================== */
 </script>
 <style>
-:root{--a:#ff2d95;--bg:#0b0710;--card:#160f1f;--t:#f3eef7;--m:#a99bb8}
+:root{--a:#b57edc;--bg:#0b0710;--card:#160f1f;--t:#f3eef7;--m:#a99bb8}
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:Montserrat,system-ui,sans-serif;background:var(--bg);color:var(--t);line-height:1.6}
 a{color:inherit;text-decoration:none}img{display:block;width:100%;height:100%;object-fit:cover}
@@ -54,12 +54,12 @@ header .wrap{display:flex;align-items:center;justify-content:space-between;heigh
 nav{display:none;gap:28px;font-size:.85rem;font-weight:600;text-transform:uppercase}nav a:hover{color:var(--a)}
 .icons{display:flex;gap:14px;font-size:1.4rem}
 .hero{position:relative;min-height:88vh;display:flex;align-items:flex-end;overflow:hidden}
-.hero img{position:absolute;inset:0}.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 30%,var(--bg) 95%)}
+.hero{background:#000}.hero img{position:absolute;inset:0;object-fit:contain;object-position:center top;background:#000}.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 30%,var(--bg) 95%)}
 .hero .wrap{position:relative;z-index:1;padding-bottom:60px}
-h1{font-size:clamp(2.6rem,9vw,5.5rem);font-weight:900;line-height:1;text-transform:uppercase;background:linear-gradient(90deg,#fff,var(--a),#b26bff,#fff);background-size:300%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:g 8s linear infinite}
+h1{font-size:clamp(2.6rem,9vw,5.5rem);font-weight:900;line-height:1;text-transform:uppercase;background:linear-gradient(90deg,#fff,var(--a),#7b5cff,#5ee7ff,#fff);background-size:300%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:g 8s linear infinite}
 @keyframes g{to{background-position:300% 0}}
 .tag{color:var(--m);font-weight:600;margin:12px 0 26px;letter-spacing:.06em;text-transform:uppercase;font-size:.9rem}
-.btn{display:inline-flex;align-items:center;gap:8px;background:var(--a);color:#fff;font-weight:800;text-transform:uppercase;padding:14px 28px;border-radius:999px;font-size:.85rem;box-shadow:0 0 24px color-mix(in srgb,var(--a) 60%,transparent);transition:transform .3s ease-out,opacity .3s ease-out}
+.btn:hover{background:#c8a2ff}.btn{display:inline-flex;align-items:center;gap:8px;background:var(--a);color:#fff;font-weight:800;text-transform:uppercase;padding:14px 28px;border-radius:999px;font-size:.85rem;box-shadow:0 0 24px #c8a2ff99;transition:transform .3s ease-out,opacity .3s ease-out}
 .btn:hover{transform:translateY(-2px) scale(1.03)}.btn.ghost{background:transparent;border:2px solid var(--a);box-shadow:none}
 section{padding:70px 0}h2{font-size:clamp(1.6rem,5vw,2.4rem);font-weight:900;text-transform:uppercase;margin-bottom:30px;text-align:center}h2 span{color:var(--a)}
 .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
