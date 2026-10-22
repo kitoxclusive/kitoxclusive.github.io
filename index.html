@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>DEIN NAME /// Offizieller Shop</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.19.0/dist/tabler-icons.min.css">
+<script>
+/* =====================================================================
+   ✏️  HIER DEINE DATEN EINTRAGEN – nur diesen Block bearbeiten!
+   ===================================================================== */
+const CONFIG = {
+  name:     "DEIN NAME",
+  tagline:  "Digital Creator · Model · Influencer",
+  bio:      "Hier steht ein kurzer Text über dich: wer du bist, was du machst und warum deine Fans dich lieben.",
+  heroImage:"https://picsum.photos/seed/hero/1200/1600",      // dein Titelfoto
+  aboutImage:"https://picsum.photos/seed/about/800/1000",     // Foto für "Über mich"
+  accent:   "#ff2d95",                                        // Akzentfarbe
+  email:    "kontakt@deine-domain.de",
+  mainCta:  { label: "Exklusive Inhalte", url: "https://onlyfans.com/kitoxtra" }, // optional, leer lassen = ausblenden
+  socials: [ // icon-Namen: https://tabler.io/icons
+    { icon:"brand-instagram", label:"Instagram", url:"https://instagram.com/DEIN_PROFIL" },
+    { icon:"brand-tiktok",    label:"TikTok",    url:"https://tiktok.com/@DEIN_PROFIL" },
+    { icon:"brand-x",         label:"X",         url:"https://x.com/DEIN_PROFIL" },
+    { icon:"brand-telegram",  label:"Telegram",  url:"https://t.me/DEIN_PROFIL" },
+    { icon:"brand-onlyfans",  label:"OnlyFans",  url:"https://onlyfans.com/kitoxtra" }
+  ],
+  products: [ // Shop-Artikel; badge: "Neu", "Ausverkauft" oder ""
+    { title:"PRODUKT 1", price:"19,99 €", image:"https://picsum.photos/seed/p1/600/800", url:"#", badge:"Neu" },
+    { title:"PRODUKT 2", price:"29,99 €", image:"https://picsum.photos/seed/p2/600/800", url:"#", badge:"Neu" },
+    { title:"PRODUKT 3", price:"9,99 €",  image:"https://picsum.photos/seed/p3/600/800", url:"#", badge:"" },
+    { title:"PRODUKT 4", price:"49,99 €", image:"https://picsum.photos/seed/p4/600/800", url:"#", badge:"Ausverkauft" }
+  ]
+};
+/* ===================================================================== */
+</script>
+<style>
+:root{--a:#ff2d95;--bg:#0b0710;--card:#160f1f;--t:#f3eef7;--m:#a99bb8}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Montserrat,system-ui,sans-serif;background:var(--bg);color:var(--t);line-height:1.6}
+a{color:inherit;text-decoration:none}img{display:block;width:100%;height:100%;object-fit:cover}
+.wrap{max-width:1200px;margin:0 auto;padding:0 20px}
+.topbar{background:var(--a);color:#fff;text-align:center;font-size:.75rem;font-weight:600;padding:6px;letter-spacing:.08em;text-transform:uppercase}
+header{position:sticky;top:0;z-index:10;background:rgba(11,7,16,.85);backdrop-filter:blur(10px);border-bottom:1px solid #ffffff14}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font-weight:900;font-size:1.2rem;letter-spacing:.04em;text-transform:uppercase}.logo span{color:var(--a)}
+nav{display:none;gap:28px;font-size:.85rem;font-weight:600;text-transform:uppercase}nav a:hover{color:var(--a)}
+.icons{display:flex;gap:14px;font-size:1.4rem}
+.hero{position:relative;min-height:88vh;display:flex;align-items:flex-end;overflow:hidden}
+.hero img{position:absolute;inset:0}.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 30%,var(--bg) 95%)}
+.hero .wrap{position:relative;z-index:1;padding-bottom:60px}
+h1{font-size:clamp(2.6rem,9vw,5.5rem);font-weight:900;line-height:1;text-transform:uppercase;background:linear-gradient(90deg,#fff,var(--a),#b26bff,#fff);background-size:300%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:g 8s linear infinite}
+@keyframes g{to{background-position:300% 0}}
+.tag{color:var(--m);font-weight:600;margin:12px 0 26px;letter-spacing:.06em;text-transform:uppercase;font-size:.9rem}
+.btn{display:inline-flex;align-items:center;gap:8px;background:var(--a);color:#fff;font-weight:800;text-transform:uppercase;padding:14px 28px;border-radius:999px;font-size:.85rem;box-shadow:0 0 24px color-mix(in srgb,var(--a) 60%,transparent);transition:transform .3s ease-out,opacity .3s ease-out}
+.btn:hover{transform:translateY(-2px) scale(1.03)}.btn.ghost{background:transparent;border:2px solid var(--a);box-shadow:none}
+section{padding:70px 0}h2{font-size:clamp(1.6rem,5vw,2.4rem);font-weight:900;text-transform:uppercase;margin-bottom:30px;text-align:center}h2 span{color:var(--a)}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.p{background:var(--card);border-radius:14px;overflow:hidden;transition:transform .4s ease-out}.p:hover{transform:translateY(-6px)}
+.p .im{aspect-ratio:3/4;position:relative;overflow:hidden}.p .im img{transition:transform .6s ease-out}.p:hover .im img{transform:scale(1.06)}
+.badge{position:absolute;top:10px;left:10px;background:var(--a);color:#fff;font-size:.7rem;font-weight:800;padding:4px 10px;border-radius:99px;text-transform:uppercase}.badge.out{background:#555}
+.p .d{padding:14px}.p h3{font-size:.85rem;font-weight:800;text-transform:uppercase}.p .pr{color:var(--a);font-weight:800;margin-top:4px}
+.about{display:grid;gap:30px;align-items:center}.about .ph{aspect-ratio:4/5;border-radius:18px;overflow:hidden;box-shadow:0 0 40px color-mix(in srgb,var(--a) 35%,transparent)}
+.about p{color:var(--m);margin-bottom:20px}.about h2{text-align:left}
+.news{background:var(--card);border-radius:20px;padding:40px 24px;text-align:center}.news p{color:var(--m);margin-bottom:20px}
+.news form{display:flex;flex-direction:column;gap:10px;max-width:480px;margin:0 auto}
+.news input{padding:14px 18px;border-radius:999px;border:1px solid #ffffff22;background:#0b0710;color:#fff;font:inherit}
+footer{border-top:1px solid #ffffff14;padding:40px 0;text-align:center;color:var(--m);font-size:.85rem}
+.soc{display:flex;justify-content:center;gap:12px;margin-bottom:20px;flex-wrap:wrap}
+.soc a{width:46px;height:46px;border-radius:50%;display:grid;place-items:center;background:var(--card);font-size:1.3rem;transition:transform .3s ease-out}.soc a:hover{transform:translateY(-3px);color:var(--a)}
+.rv{opacity:0;transform:translateY(24px);transition:opacity .6s ease-out,transform .6s ease-out}.rv.in{opacity:1;transform:none}
+@media(min-width:768px){nav{display:flex}.grid{grid-template-columns:repeat(4,1fr);gap:20px}.about{grid-template-columns:1fr 1fr}.news form{flex-direction:row}.news input{flex:1}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+</style></head><body>
+<div class="topbar" id="topbar"></div>
+<header><div class="wrap"><a href="#" class="logo" id="logo"></a>
+<nav><a href="#shop">Shop</a><a href="#about">Über mich</a><a href="#news">Newsletter</a><a href="#kontakt">Kontakt</a></nav>
+<div class="icons"><a href="#shop" aria-label="Shop"><i class="ti ti-shopping-bag"></i></a><a href="#kontakt" aria-label="Kontakt"><i class="ti ti-mail"></i></a></div></div></header>
+<section class="hero" style="padding:0"><img id="heroImg" alt="" fetchpriority="high"><div class="wrap">
+<h1 id="hName"></h1><p class="tag" id="hTag"></p><a href="#shop" class="btn"><i class="ti ti-shopping-bag"></i>Zum Shop</a> <a id="cta" class="btn ghost" target="_blank" rel="noopener"></a></div></section>
+<section id="shop"><div class="wrap"><h2>Neue <span>Produkte</span></h2><div class="grid" id="grid"></div></div></section>
+<section id="about"><div class="wrap about"><div class="ph rv"><img id="aboutImg" loading="lazy" alt=""></div><div class="rv"><h2>Über <span>mich</span></h2><p id="bio"></p><a href="#kontakt" class="btn">Kontakt</a></div></div></section>
+<section id="news"><div class="wrap"><div class="news rv"><h2>News<span>letter</span></h2><p>Verpasse keine neuen Produkte und Aktionen.</p>
+<form onsubmit="event.preventDefault();this.innerHTML='<p>Danke! 💖</p>'"><input type="email" required placeholder="Deine E-Mail-Adresse"><button class="btn">Anmelden</button></form></div></div></section>
+<footer id="kontakt"><div class="wrap"><div class="soc" id="soc"></div><p><a id="mail"></a></p><p style="margin-top:10px">© <span id="yr"></span> <span id="fName"></span> /// Impressum · Datenschutz · AGB</p></div></footer>
+<script>
+const C=CONFIG,$=id=>document.getElementById(id),esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+document.documentElement.style.setProperty('--a',C.accent);document.title=C.name+" /// Offizieller Shop";
+$('topbar').textContent="Willkommen im offiziellen Shop von "+C.name;
+$('logo').innerHTML=esc(C.name)+"<span> ///</span>";$('hName').textContent=C.name;$('hTag').textContent=C.tagline;
+$('heroImg').src=C.heroImage;$('aboutImg').src=C.aboutImage;$('bio').textContent=C.bio;
+if(C.mainCta&&C.mainCta.url){$('cta').href=C.mainCta.url;$('cta').innerHTML='<i class="ti ti-star"></i>'+esc(C.mainCta.label)}else $('cta').remove();
+$('grid').innerHTML=C.products.map(p=>`<a class="p rv" href="${esc(p.url)}"><div class="im"><img loading="lazy" src="${esc(p.image)}" alt="${esc(p.title)}">${p.badge?`<span class="badge ${/aus/i.test(p.badge)?'out':''}">${esc(p.badge)}</span>`:''}</div><div class="d"><h3>${esc(p.title)}</h3><div class="pr">${esc(p.price)}</div></div></a>`).join('');
+$('soc').innerHTML=C.socials.map(s=>`<a href="${esc(s.url)}" target="_blank" rel="noopener" aria-label="${esc(s.label)}"><i class="ti ti-${esc(s.icon)}"></i></a>`).join('');
+$('mail').href="mailto:"+C.email;$('mail').textContent=C.email;$('yr').textContent=new Date().getFullYear();$('fName').textContent=C.name;
+const io=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}}),{threshold:.15});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+</script></body></html>
