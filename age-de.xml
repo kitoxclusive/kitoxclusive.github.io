@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<age-de-meta-label>
+  <version>1.0</version>
+  <age-issuer>self</age-issuer>
+  <default-age>18</default-age>
+  <min-age>18</min-age>
+  <country>de</country>
+</age-de-meta-label>
