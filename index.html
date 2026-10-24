@@ -87,13 +87,21 @@ footer{border-top:1px solid #ffffff14;padding:40px 0;text-align:center;color:var
 .rv{opacity:0;transform:translateY(24px);transition:opacity .6s ease-out,transform .6s ease-out}.rv.in{opacity:1;transform:none}
 @media(min-width:768px){nav{display:flex}.grid{grid-template-columns:repeat(4,1fr);gap:20px}.about{grid-template-columns:1fr 1fr}.news form{flex-direction:row}.news input{flex:1}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+
+/* Hero zentriert + robuster Shop-Button */
+.hero{justify-content:center}.hero .wrap{width:100%;max-width:1100px;margin:0 auto;text-align:center;display:flex;flex-direction:column;align-items:center}
+.hero .hero-title{margin:0 auto 6px}.hero h1,.hero .tag{text-align:center;margin-left:auto;margin-right:auto}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;margin-top:8px}
+.hero .btn.shop,.hero .btn.shop:hover,.hero .btn.shop:focus,.hero .btn.shop:focus-visible,.hero .btn.shop:active,.hero .btn.shop:visited{background:#b57edc!important;background-image:none!important;color:#14061f!important;-webkit-text-fill-color:#14061f!important;-webkit-background-clip:border-box!important;background-clip:border-box!important;opacity:1!important}
+.hero .btn.shop *{color:#14061f!important;-webkit-text-fill-color:#14061f!important}
+.hero .btn.shop:focus-visible{outline:3px solid #fff;outline-offset:3px}
 </style></head><body>
 <div class="topbar" id="topbar"></div>
 <header><div class="wrap"><a href="#" class="logo" id="logo"></a>
 <nav><a href="#exklusiv">Exklusiv</a><a href="#shop">Shop</a><a href="#about">Über mich</a><a href="#news">Newsletter</a><a href="#kontakt">Kontakt</a></nav>
 <div class="icons"><a href="#shop" aria-label="Shop"><i class="ti ti-shopping-bag"></i></a><a href="#kontakt" aria-label="Kontakt"><i class="ti ti-mail"></i></a></div></div></header>
 <section class="hero" style="padding:0"><div class="wrap"><img id="heroImg" class="hero-title" width="1040" height="440" alt="Neon-Schriftzug „Sex is Art“ – Kitolicious" fetchpriority="high">
-<h1 id="hName">Kitolicious</h1><p class="tag" id="hTag"></p><a href="#shop" class="btn"><i class="ti ti-shopping-bag"></i>Zum Shop</a> <a id="cta" class="btn ghost"></a></div></section>
+<h1 id="hName">Kitolicious</h1><p class="tag" id="hTag"></p><div class="hero-ctas"><a href="#shop" class="btn shop"><i class="ti ti-shopping-bag"></i><span>Zum Shop</span></a><a id="cta" class="btn ghost"></a></div></div></section>
 <section id="exklusiv"><div class="wrap"><h2>Exklusive <span>Inhalte</span></h2><div class="lk rv" id="lk"></div></div></section>
 <section id="shop"><div class="wrap"><h2>Neue <span>Produkte</span></h2><div class="grid" id="grid"></div></div></section>
 <section id="about"><div class="wrap about"><div class="ph rv"><img id="aboutImg" loading="lazy" alt="Kito, Creator hinter Kitolicious"></div><div class="rv"><h2>Über <span>mich</span></h2><p id="bio"></p><a href="#kontakt" class="btn">Kontakt</a></div></div></section>
