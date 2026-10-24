@@ -95,7 +95,6 @@ footer{border-top:1px solid #ffffff14;padding:40px 0;text-align:center;color:var
 .hero .btn.shop,.hero .btn.shop:hover,.hero .btn.shop:focus,.hero .btn.shop:focus-visible,.hero .btn.shop:active,.hero .btn.shop:visited{background:#b57edc!important;background-image:none!important;color:#14061f!important;-webkit-text-fill-color:#14061f!important;-webkit-background-clip:border-box!important;background-clip:border-box!important;opacity:1!important}
 .hero .btn.shop *{color:#14061f!important;-webkit-text-fill-color:#14061f!important}
 .hero .btn.shop:focus-visible{outline:3px solid #fff;outline-offset:3px}
-#views{margin-top:8px;font-size:.75rem;color:#c8a2ff;opacity:0;transition:opacity .6s ease-out}#views.on{opacity:.6}@media(prefers-reduced-motion:reduce){#views{transition:none}}
 </style></head><body>
 <div class="topbar" id="topbar"></div>
 <header><div class="wrap"><a href="#" class="logo" id="logo"></a>
@@ -108,7 +107,7 @@ footer{border-top:1px solid #ffffff14;padding:40px 0;text-align:center;color:var
 <section id="about"><div class="wrap about"><div class="ph rv"><img id="aboutImg" loading="lazy" alt="Kito, Creator hinter Kitolicious"></div><div class="rv"><h2>Über <span>mich</span></h2><p id="bio"></p><a href="#kontakt" class="btn">Kontakt</a></div></div></section>
 <section id="news"><div class="wrap"><div class="news rv"><h2>News<span>letter</span></h2><p>Verpasse keine neuen Produkte und Aktionen.</p>
 <form onsubmit="event.preventDefault();this.innerHTML='<p>Danke! 💖</p>'"><input type="email" required placeholder="Deine E-Mail-Adresse"><button class="btn">Anmelden</button></form></div></div></section>
-<footer id="kontakt"><div class="wrap"><div class="soc" id="soc"></div><p><a id="mail"></a></p><p style="margin-top:10px">© <span id="yr"></span> <span id="fName"></span> /// Impressum · Datenschutz · AGB</p><p id="views" aria-live="polite"></p></div></footer>
+<footer id="kontakt"><div class="wrap"><div class="soc" id="soc"></div><p><a id="mail"></a></p><p style="margin-top:10px">© <span id="yr"></span> <span id="fName"></span> /// Impressum · Datenschutz · AGB</p></div></footer>
 <script>
 const C=CONFIG,$=id=>document.getElementById(id),esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 document.documentElement.style.setProperty('--a',C.accent);document.title=C.name+" /// Offizieller Shop";
@@ -122,6 +121,4 @@ $('soc').innerHTML=C.socials.map(s=>`<a href="${esc(s.url)}" target="_blank" rel
 $('mail').href="mailto:"+C.email;$('mail').textContent=C.email;$('yr').textContent=new Date().getFullYear();$('fName').textContent=C.name;
 const io=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}}),{threshold:.15});
 document.querySelectorAll('.rv').forEach(el=>io.observe(el));
-</script><script>(function(){var el=document.getElementById('views');if(!el||!window.fetch)return;var k='kl_viewed',u='https://abacus.jasoncameron.dev/',seen=false;try{seen=sessionStorage.getItem(k)}catch(e){}
-fetch(u+(seen?'get':'hit')+'/kitolicious.de/views',{cache:'no-store'}).then(function(r){if(!r.ok)throw 0;return r.json()}).then(function(d){if(typeof d.value!=='number')throw 0;try{sessionStorage.setItem(k,'1')}catch(e){}el.textContent='👁 '+d.value.toLocaleString('de-DE')+(d.value===1?' Aufruf':' Aufrufe');el.classList.add('on')}).catch(function(){el.remove()})})();</script>
-</body></html>
+</script></body></html>
