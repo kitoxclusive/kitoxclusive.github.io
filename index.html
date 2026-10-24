@@ -19,8 +19,8 @@
 const CONFIG = {
   name:     "Kitolicious",
   tagline:  "Digital Creator · Model · Influencer",
-  bio:      "Hier steht ein kurzer Text über dich: wer du bist, was du machst und warum deine Fans dich lieben.",
-  heroImage:"img/sex-is-art.jpg",      // dein Titelfoto
+  bio:      "Hey, ich bin Kito – 32, aus Kiel, bi und der Kopf hinter Kitolicious. Als Digital Creator, Model und Influencer zeige ich mich so, wie ich bin: selbstbewusst, verspielt und mit einer Prise Neon im Blut. Für mich ist Sinnlichkeit eine Kunstform – ästhetisch, ehrlich und immer mit einem Augenzwinkern. Wenn du mehr von mir sehen willst, als Instagram erlaubt, findest du meine exklusiven Inhalte (18+) direkt hier. Folg mir, schreib mir – ich freu mich auf dich. 💜",
+  heroImage:"img/sex-is-art-title.jpg",      // dein Titelfoto
   aboutImage:"https://picsum.photos/seed/about/800/1000",     // Foto für "Über mich"
   accent:   "#b57edc",                                        // Akzentfarbe
   email:    "kontakt@deine-domain.de",
@@ -61,13 +61,13 @@ header .wrap{display:flex;align-items:center;justify-content:space-between;heigh
 .logo{font-weight:900;font-size:1.2rem;letter-spacing:.04em;text-transform:uppercase}.logo span{color:var(--a)}
 nav{display:none;gap:28px;font-size:.85rem;font-weight:600;text-transform:uppercase}nav a:hover{color:var(--a)}
 .icons{display:flex;gap:14px;font-size:1.4rem}
-.hero{position:relative;min-height:88vh;display:flex;align-items:flex-end;overflow:hidden}
-.hero{background:#000}.hero img{position:absolute;inset:0;object-fit:contain;object-position:center top;background:#000}.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 30%,var(--bg) 95%)}
-.hero .wrap{position:relative;z-index:1;padding-bottom:60px}
+.hero{position:relative;min-height:80vh;display:flex;align-items:center;overflow:hidden;background:radial-gradient(ellipse at 50% 30%,#2a0f2a 0%,#000 60%)}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,var(--bg) 100%);pointer-events:none}.hero-title{display:block;width:min(560px,88%);height:auto;margin:0 0 6px -2%;-webkit-mask-image:radial-gradient(closest-side,#000 82%,transparent 100%);mask-image:radial-gradient(closest-side,#000 82%,transparent 100%)}
+.hero .wrap{position:relative;z-index:1;padding:90px 20px 60px}
 h1{font-size:clamp(2.6rem,9vw,5.5rem);font-weight:900;line-height:1;text-transform:uppercase;background:linear-gradient(90deg,#fff,var(--a),#7b5cff,#5ee7ff,#fff);background-size:300%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:g 8s linear infinite}
 @keyframes g{to{background-position:300% 0}}
 .tag{color:var(--m);font-weight:600;margin:12px 0 26px;letter-spacing:.06em;text-transform:uppercase;font-size:.9rem}
-.btn:hover{background:#c8a2ff}.btn{display:inline-flex;align-items:center;gap:8px;background:var(--a);color:#fff;font-weight:800;text-transform:uppercase;padding:14px 28px;border-radius:999px;font-size:.85rem;box-shadow:0 0 24px #c8a2ff99;transition:transform .3s ease-out,opacity .3s ease-out}
+.btn:hover{background:#c8a2ff;color:#1a0b2e}.btn{display:inline-flex;align-items:center;gap:8px;background:var(--a);color:#fff;font-weight:800;text-transform:uppercase;padding:14px 28px;border-radius:999px;font-size:.85rem;box-shadow:0 0 24px #c8a2ff99;transition:transform .3s ease-out,opacity .3s ease-out}
 .btn:hover{transform:translateY(-2px) scale(1.03)}.btn.ghost{background:transparent;border:2px solid var(--a);box-shadow:none}
 section{padding:70px 0}h2{font-size:clamp(1.6rem,5vw,2.4rem);font-weight:900;text-transform:uppercase;margin-bottom:30px;text-align:center}h2 span{color:var(--a)}
 .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
@@ -92,7 +92,7 @@ footer{border-top:1px solid #ffffff14;padding:40px 0;text-align:center;color:var
 <header><div class="wrap"><a href="#" class="logo" id="logo"></a>
 <nav><a href="#exklusiv">Exklusiv</a><a href="#shop">Shop</a><a href="#about">Über mich</a><a href="#news">Newsletter</a><a href="#kontakt">Kontakt</a></nav>
 <div class="icons"><a href="#shop" aria-label="Shop"><i class="ti ti-shopping-bag"></i></a><a href="#kontakt" aria-label="Kontakt"><i class="ti ti-mail"></i></a></div></div></header>
-<section class="hero" style="padding:0"><img id="heroImg" alt="Neon-Schriftzug „Sex is Art“ – Kitolicious" fetchpriority="high"><div class="wrap">
+<section class="hero" style="padding:0"><div class="wrap"><img id="heroImg" class="hero-title" width="1040" height="440" alt="Neon-Schriftzug „Sex is Art“ – Kitolicious" fetchpriority="high">
 <h1 id="hName">Kitolicious</h1><p class="tag" id="hTag"></p><a href="#shop" class="btn"><i class="ti ti-shopping-bag"></i>Zum Shop</a> <a id="cta" class="btn ghost"></a></div></section>
 <section id="exklusiv"><div class="wrap"><h2>Exklusive <span>Inhalte</span></h2><div class="lk rv" id="lk"></div></div></section>
 <section id="shop"><div class="wrap"><h2>Neue <span>Produkte</span></h2><div class="grid" id="grid"></div></div></section>
