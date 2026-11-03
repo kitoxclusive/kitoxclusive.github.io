@@ -1,0 +1,11 @@
+(function(){var c=document.getElementById('embers');if(!c||!c.getContext)return;var x=c.getContext('2d'),W=0,H=0,P=[],run=false,raf=0,rm=window.matchMedia('(prefers-reduced-motion: reduce)'),spr=document.createElement('canvas');spr.width=spr.height=64;var g=spr.getContext('2d'),gr=g.createRadialGradient(32,32,0,32,32,32);gr.addColorStop(0,'rgba(255,200,170,1)');gr.addColorStop(.2,'rgba(255,60,50,.9)');gr.addColorStop(.55,'rgba(220,20,40,.25)');gr.addColorStop(1,'rgba(200,0,30,0)');g.fillStyle=gr;g.fillRect(0,0,64,64);
+function mk(f){var big=Math.random()<.18;return{x:Math.random()*W,y:f?Math.random()*H:H+20,r:big?7+Math.random()*10:2+Math.random()*3.8,vy:(big?.1:.15)+Math.random()*.4,vx:(Math.random()-.5)*.25,a:big?.3+Math.random()*.3:.6+Math.random()*.4,t:Math.random()*6.28,s:.4+Math.random()*1.2}}
+function size(force){var d=Math.min(window.devicePixelRatio||1,1.5),w=window.innerWidth,h=window.innerHeight,re=force||w!==W||Math.abs(h-H)>150;W=w;H=h;c.width=W*d;c.height=H*d;x.setTransform(d,0,0,d,0,0);if(re){var n=Math.round(Math.min(55,Math.max(18,W*H/16000)));P=[];for(var i=0;i<n;i++)P.push(mk(true))}}
+function draw(dt){x.clearRect(0,0,W,H);for(var i=0;i<P.length;i++){var p=P[i];p.t+=dt*.001*p.s;p.y-=p.vy*dt*.06;p.x+=(p.vx+Math.sin(p.t)*.18)*dt*.06;if(p.y<-30||p.x<-30||p.x>W+30){P[i]=mk(false);continue}var f=Math.min(1,p.y/(H*.2)),al=p.a*(.65+.35*Math.sin(p.t*2.3))*f;x.globalAlpha=al;x.drawImage(spr,p.x-p.r*2,p.y-p.r*2,p.r*4,p.r*4)}x.globalAlpha=1}
+var last=0;function loop(ts){if(!run)return;raf=requestAnimationFrame(loop);var dt=ts-last;if(dt<15)return;last=ts;draw(Math.min(50,dt))}
+function start(){if(run||rm.matches||document.hidden)return;run=true;last=performance.now();raf=requestAnimationFrame(loop)}
+function stop(){run=false;cancelAnimationFrame(raf)}
+size(true);draw(16);
+document.addEventListener('visibilitychange',function(){document.hidden?stop():start()});
+var rt;window.addEventListener('resize',function(){clearTimeout(rt);rt=setTimeout(function(){size();if(!run)draw(16)},150)});
+rm.addEventListener&&rm.addEventListener('change',function(){rm.matches?stop():(start())});start()})();
